@@ -14,7 +14,7 @@
 #include <d3dx10math.h>
 #include <fstream>
 #include "MsgHandlingSystem.h"
-#include "creature.h"
+#include "creatureclass.h"
 using namespace std;
 
 
@@ -90,7 +90,7 @@ private:
 	TextureClass* m_Texture;
 	ModelType* m_model;
 
-	Creature* m_creature;
+	CreatureClass* m_creature;
 
 };
 

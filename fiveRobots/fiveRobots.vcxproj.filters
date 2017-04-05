@@ -81,13 +81,13 @@
     <ClInclude Include="lightclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="muscle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="node.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="creatureclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="muscleclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="nodeclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -155,13 +155,13 @@
     <ClCompile Include="lightclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="creature.cpp">
+    <ClCompile Include="nodeclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="node.cpp">
+    <ClCompile Include="muscleclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="muscle.cpp">
+    <ClCompile Include="creatureclass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

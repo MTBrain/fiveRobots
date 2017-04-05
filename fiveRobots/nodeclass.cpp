@@ -1,4 +1,4 @@
-#include "node.h"
+#include "nodeclass.h"
 
 NodeClass::NodeClass()
 {

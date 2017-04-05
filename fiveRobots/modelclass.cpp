@@ -421,15 +421,17 @@ bool ModelClass::createModel(MHS in)
 
 		if (!m_creature)
 		{
-			m_creature = new Creature(3, 2);
+			m_creature = new CreatureClass(3, 2);
 		}
+		m_vertices =(VertexType*) malloc(m_creature->nodeCount*circleVertices + m_creature->muscleCount * 4);
+		m_indices = (unsigned long*)malloc(m_creature->nodeCount*circleVertices * 3 + m_creature->muscleCount * 6);
 		for (int i = 0; i < m_creature->nodeCount; i++)
 		{
 			createCircle(D3DXVECTOR3(m_creature->nodes[i]->posX, m_creature->nodes[i]->posY, 0.0), m_creature->nodes[i]->size, m_vertices, m_indices, circleVertices,oi,ov);
 			ov += circleVertices;
 			oi += 3 * circleVertices;
 		}
-		for (int i = 0; i < m_creature->muslceCount; i++)
+		for (int i = 0; i < m_creature->muscleCount; i++)
 		{
 			createRectangle2D(D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node1]->posX, m_creature->nodes[m_creature->muscles[i]->node1]->posY + MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1f),
 				D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node2]->posX, m_creature->nodes[m_creature->muscles[i]->node2]->posY - MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1),

@@ -2,8 +2,8 @@
 #ifndef _CREATURECLASS_H_
 #define _CREATURECLASS_H_
 
-#include "node.h"
-#include "muscle.h"
+#include "nodeclass.h"
+#include "muscleclass.h"
 
 class CreatureClass 
 {
