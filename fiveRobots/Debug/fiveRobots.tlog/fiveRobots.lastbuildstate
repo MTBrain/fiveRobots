@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+<<<<<<< HEAD
 Debug|Win32|D:\Programier kram\games\fiveRobots\|
+=======
+Debug|Win32|C:\Users\Amon\Desktop\fiveRobots\|
+>>>>>>> 02167b01a0dfa1440b3f0b9448a5f234606ab97d

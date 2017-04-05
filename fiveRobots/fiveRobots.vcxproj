@@ -22,11 +22,14 @@
     <ClInclude Include="fpsclass.h" />
     <ClInclude Include="gameclass.h" />
     <ClInclude Include="graphicsclass.h" />
+    <ClInclude Include="creature.h" />
     <ClInclude Include="inputclass.h" />
     <ClInclude Include="lightclass.h" />
     <ClInclude Include="lightshaderclass.h" />
     <ClInclude Include="modelclass.h" />
     <ClInclude Include="MsgHandlingSystem.h" />
+    <ClInclude Include="muscle.h" />
+    <ClInclude Include="node.h" />
     <ClInclude Include="soundclass.h" />
     <ClInclude Include="systemclass.h" />
     <ClInclude Include="textclass.h" />
@@ -38,8 +41,8 @@
     <ClCompile Include="bitmapclass.cpp" />
     <ClCompile Include="cameraclass.cpp" />
     <ClCompile Include="cpuclass.cpp" />
+    <ClCompile Include="creature.cpp" />
     <ClCompile Include="d3dclass.cpp" />
-    <ClCompile Include="fiveRobots.cpp" />
     <ClCompile Include="fogshaderclass.cpp" />
     <ClCompile Include="fontclass.cpp" />
     <ClCompile Include="fontshaderclass.cpp" />
@@ -51,6 +54,8 @@
     <ClCompile Include="lightshaderclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelclass.cpp" />
+    <ClCompile Include="muscle.cpp" />
+    <ClCompile Include="node.cpp" />
     <ClCompile Include="soundclass.cpp" />
     <ClCompile Include="systemclass.cpp" />
     <ClCompile Include="textclass.cpp" />
@@ -97,8 +102,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Programier kram\games\d3d11 universal\fiveRobots\DirectX11\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Programier kram\games\d3d11 universal\fiveRobots\DirectX11\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Amon\Desktop\fiveRobots\DirectX11\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Amon\Desktop\fiveRobots\DirectX11\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>D:\Programier kram\games\d3d11 universal\fiveRobots\DirectX11\Include;$(IncludePath)</IncludePath>
