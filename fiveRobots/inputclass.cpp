@@ -233,6 +233,10 @@ bool InputClass::IsEscapePressed()
 	return false;
 }
 
+void InputClass::ResetEscape()
+{
+	m_keyboardState[DIK_ESCAPE] = 0;
+}
 
 void InputClass::GetMouseLocation(int& mouseX, int& mouseY)
 {

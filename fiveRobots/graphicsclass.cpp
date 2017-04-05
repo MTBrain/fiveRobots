@@ -114,7 +114,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
-	result = m_Model->Initialize(m_D3D->GetDevice(), { 0,(unsigned int)(new int[2]{ 1,0 }),0 }, L"../fiveRobots/data/seafloor.dds");
+	result = m_Model->Initialize(m_D3D->GetDevice(), { 2,0,0 } , L"../fiveRobots/data/seafloor.dds");
 	if (!result)
 	{
 		MessageBoxA(NULL, "failed to ini model", "graphic.cpp", MB_OK);

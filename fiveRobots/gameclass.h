@@ -9,7 +9,7 @@ public:
 	~GameClass();
 
 
-	bool Frame(MHS);
+	vMHS Frame(MHS);
 	vector<MHS>* Initialize(MHS);
 
 private:
@@ -18,5 +18,4 @@ private:
 	std::vector<unsigned int> loadedObj;
 
 	
-
 };

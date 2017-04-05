@@ -9,7 +9,7 @@
 #include <vector>
 
 using namespace std;
-const int asda = 1;
+
 
 struct MHS
 {
@@ -19,6 +19,7 @@ struct MHS
 	unsigned int size;
 };
 
+vMHS m_vmhs;
 #endif
 
 

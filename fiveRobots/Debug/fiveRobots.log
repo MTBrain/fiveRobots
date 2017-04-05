@@ -55,6 +55,10 @@ d:\programier kram\games\d3d11 universal\fiverobots\directx11\include\d3d10.h(60
   c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50445): note: Siehe vorherige Definition von "D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS"
 d:\programier kram\games\d3d11 universal\fiverobots\directx11\include\d3d10.h(609): warning C4005: "D3D10_ERROR_FILE_NOT_FOUND": Makro-Neudefinition
   c:\program files (x86)\windows kits\8.1\include\shared\winerror.h(50454): note: Siehe vorherige Definition von "D3D10_ERROR_FILE_NOT_FOUND"
-d:\programier kram\games\d3d11 universal\fiverobots\fiverobots\systemclass.cpp(235): warning C4065: switch-Anweisung enthält "default", aber keine case-Bezeichnungen
-  fiveRobots.vcxproj -> D:\Programier kram\games\d3d11 universal\fiveRobots\Debug\fiveRobots.exe
-  fiveRobots.vcxproj -> D:\Programier kram\games\d3d11 universal\fiveRobots\Debug\fiveRobots.pdb (Partial PDB)
+d:\programier kram\games\fiverobots\fiverobots\systemclass.cpp(236): warning C4065: switch-Anweisung enthält "default", aber keine case-Bezeichnungen
+  inputclass.cpp
+  Code wird generiert...
+  Überspringen... (keine relevanten Änderungen gefunden)
+  main.cpp
+  fiveRobots.vcxproj -> D:\Programier kram\games\fiveRobots\Debug\fiveRobots.exe
+  fiveRobots.vcxproj -> D:\Programier kram\games\fiveRobots\Debug\fiveRobots.pdb (Partial PDB)

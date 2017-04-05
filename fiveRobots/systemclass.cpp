@@ -58,7 +58,6 @@ bool SystemClass::Initialize()
 		return false;
 	}
 
-
 	//Initialize fps cpu handle and timer class
 
 	// CPU
@@ -175,7 +174,7 @@ void SystemClass::Run()
 bool SystemClass::Frame()
 {
 	bool result;
-
+	vMHS* vmhs;
 	result = m_Input->Frame();
 	if (!result)
 	{
@@ -185,11 +184,16 @@ bool SystemClass::Frame()
 	// Check if the user pressed escape and wants to exit the application.
 	if(m_Input->IsEscapePressed())
 	{
+		USHORT tmp = MessageBoxA(NULL, "sure you want to exit?", "exit warning", MB_YESNO);
+		m_Input->ResetEscape();
+		if (tmp == 6) return false;
+		return true;
+	}
+	result = m_game->Frame();
+	if (!result) 
+	{
 		return false;
 	}
-	m_game->Frame({ 0,0,0 });
-
-
 
 	// Do the frame processing for the graphics object.
 	result = m_Graphics->Frame(NULL);

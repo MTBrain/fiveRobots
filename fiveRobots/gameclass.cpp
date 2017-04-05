@@ -20,23 +20,21 @@ vector<MHS>* GameClass::Initialize(MHS in)
 	{
 		re.push_back(MHS { 1, 1, sizeof(int) }); // initialize world
 	}
-	return NULL;
+	return &re;
 }
 
-bool GameClass::Frame(MHS in)
+
+
+bool GameClass::Frame(void)
 {
 	if (messages.size() != 0)
 	{
-		return NULL;
+		return false;
 	}
 
-	if (in.msg == 0)
-	{
-
-	}
 
 
 	// do shit 
 
-	return true; // should be changed
+	return false;; // should be changed
 }

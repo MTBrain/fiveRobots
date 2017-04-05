@@ -329,7 +329,7 @@ bool ModelClass::createModel(MHS in)
 {
 	
 
-	int switchvar = *((int *)in.ptr);
+	int switchvar = in.msg;
 	switch (switchvar)
 	{
 	case 1:
@@ -402,6 +402,8 @@ bool ModelClass::createModel(MHS in)
 	case 2:
 		m_vertices = new VertexType[8];
 		m_indices = new unsigned long[36];
+		m_indexCount = 36;
+		m_vertexCount = 8;
 		createRectangle(D3DXVECTOR3(-1,1,1),D3DXVECTOR3(1, -1, -1),m_vertices,m_indices);
 		return true;
 
