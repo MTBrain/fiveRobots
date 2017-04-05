@@ -14,6 +14,8 @@ SystemClass::SystemClass()
 	m_cpuUsage = 0;
 	m_fps = 0;
 	m_timer = 0;
+
+	m_vmhs = new vector<MHS>;
 }
 
 
@@ -51,13 +53,12 @@ bool SystemClass::Initialize()
 	m_Input->Initialize(m_hinstance,m_hwnd,screenWidth,screenHeight);
 
 
-	m_game = new GameClass();
+	m_game = new GameClass(m_vmhs);
 	if (!m_game)
 	{
 		MessageBoxA(NULL, "game ini failed", "sysClass", MB_OK);
 		return false;
 	}
-
 
 	//Initialize fps cpu handle and timer class
 
@@ -90,7 +91,7 @@ bool SystemClass::Initialize()
 
 	m_timer->Initialize();
 	// Create the graphics object.  This object will handle rendering all the graphics for this application.
-	m_Graphics = new GraphicsClass;
+	m_Graphics = new GraphicsClass(m_vmhs);
 	if(!m_Graphics)
 	{
 		return false;
@@ -175,7 +176,7 @@ void SystemClass::Run()
 bool SystemClass::Frame()
 {
 	bool result;
-
+	vMHS* vmhs;
 	result = m_Input->Frame();
 	if (!result)
 	{
@@ -185,11 +186,16 @@ bool SystemClass::Frame()
 	// Check if the user pressed escape and wants to exit the application.
 	if(m_Input->IsEscapePressed())
 	{
+		USHORT tmp = MessageBoxA(NULL, "sure you want to exit?", "exit warning", MB_YESNO);
+		m_Input->ResetEscape();
+		if (tmp == 6) return false;
+		return true;
+	}
+	result = m_game->Frame();
+	if (!result) 
+	{
 		return false;
 	}
-	m_game->Frame({ 0,0,0 });
-
-
 
 	// Do the frame processing for the graphics object.
 	result = m_Graphics->Frame(NULL);

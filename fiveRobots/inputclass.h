@@ -40,7 +40,7 @@ public:
 
 	bool IsEscapePressed();
 	void GetMouseLocation(int&, int&);
-
+	void ResetEscape();
 private:
 	bool ReadKeyboard();
 	bool ReadMouse();

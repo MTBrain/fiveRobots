@@ -8,10 +8,13 @@
 //////////////
 // INCLUDES //
 //////////////
+#define _USE_MATH_DEFINES
+#include <math.h>
 #include <d3d11.h>
 #include <d3dx10math.h>
 #include <fstream>
 #include "MsgHandlingSystem.h"
+#include "creature.h"
 using namespace std;
 
 
@@ -43,7 +46,7 @@ private:
 
 public:
 	
-	ModelClass();
+	ModelClass(vMHS*);
 	ModelClass(const ModelClass&);
 	~ModelClass();
 
@@ -72,9 +75,13 @@ private:
 
 	bool createModel(MHS);
 	void createRectangle(D3DXVECTOR3, D3DXVECTOR3, VertexType*, unsigned long*);
+	void createRectangle2D(D3DXVECTOR3, D3DXVECTOR3, VertexType*, unsigned long*,UINT ,UINT);
+	void createCircle(D3DXVECTOR3, double, VertexType*, unsigned long*,int,UINT,UINT);
+	
 
 private:
 
+	vMHS* m_vmhs;
 	VertexType* m_vertices;
 	unsigned long* m_indices;
 
@@ -82,6 +89,9 @@ private:
 	int m_vertexCount, m_indexCount;
 	TextureClass* m_Texture;
 	ModelType* m_model;
+
+	Creature* m_creature;
+
 };
 
 #endif

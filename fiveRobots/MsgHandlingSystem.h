@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _MHS_H_
 #define _MHS_H_
 
@@ -9,7 +7,7 @@
 #include <vector>
 
 using namespace std;
-const int asda = 1;
+
 
 struct MHS
 {
