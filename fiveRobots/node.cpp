@@ -1,10 +1,10 @@
 #include "node.h"
 
-Node::Node()
+NodeClass::NodeClass()
 {
 }
 
-Node::Node(double _size, double _mass, double _posX, double _posY, double _velX, double _velY)
+NodeClass::NodeClass(double _size, double _mass, double _posX, double _posY, double _velX, double _velY)
 {
 	size = _size;
 	mass = _mass;

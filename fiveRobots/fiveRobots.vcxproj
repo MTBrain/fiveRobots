@@ -22,7 +22,7 @@
     <ClInclude Include="fpsclass.h" />
     <ClInclude Include="gameclass.h" />
     <ClInclude Include="graphicsclass.h" />
-    <ClInclude Include="creature.h" />
+    <ClInclude Include="creatureclass.h" />
     <ClInclude Include="inputclass.h" />
     <ClInclude Include="lightclass.h" />
     <ClInclude Include="lightshaderclass.h" />

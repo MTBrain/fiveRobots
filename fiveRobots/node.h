@@ -1,8 +1,8 @@
 #pragma once
-#ifndef _NODE_H_
-#define _NODE_H_
+#ifndef _NODECLASS_H_
+#define _NODECLASS_H_
 
-class Node
+class NodeClass
 {
 public:
 	double size; 
@@ -10,8 +10,8 @@ public:
 	double posX, posY;
 	double velX, velY;
 
-	Node();
+	NodeClass();
 
-	Node(double, double, double, double, double, double);
+	NodeClass(double, double, double, double, double, double);
 };
 #endif

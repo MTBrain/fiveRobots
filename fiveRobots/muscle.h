@@ -1,8 +1,8 @@
 #pragma once
-#ifndef _MUSCLE_H_
-#define _MUSCLE_H_
+#ifndef _MUSCLECLASS_H_
+#define _MUSCLECLASS_H_
 
-class Muscle
+class MuscleClass
 {
 public:
 	double strength;
@@ -10,8 +10,8 @@ public:
 	double cLength, eLength;
 	double time, offsetTime;
 
-	Muscle();
+	MuscleClass();
 
-	Muscle(double, double, double, double, double, double, double);
+	MuscleClass(double, double, double, double, double, double, double);
 };
 #endif
