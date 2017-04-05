@@ -4,8 +4,10 @@
 #include "modelclass.h"
 
 
-ModelClass::ModelClass()
+ModelClass::ModelClass(vMHS* in)
 {
+	m_vmhs = in;
+
 	m_vertexBuffer = 0;
 	m_indexBuffer = 0;
 

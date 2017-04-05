@@ -5,16 +5,16 @@
 class GameClass
 {
 public:
-	GameClass();
+	GameClass(vMHS*);
 	~GameClass();
 
 
-	vMHS Frame(MHS);
+	bool Frame(void);
 	vector<MHS>* Initialize(MHS);
 
 private:
 
-	vMHS messages;
+	vMHS* m_vmhs;
 	std::vector<unsigned int> loadedObj;
 
 	

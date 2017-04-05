@@ -4,8 +4,9 @@
 #include "graphicsclass.h"
 
 
-GraphicsClass::GraphicsClass()
+GraphicsClass::GraphicsClass(vMHS* in)
 {
+	m_vmhs = in;
 	m_D3D = 0;
 	m_Camera = 0;
 	m_TextureShader = 0;
@@ -108,7 +109,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
-	m_Model = new ModelClass;
+	m_Model = new ModelClass(m_vmhs);
 	if (!m_Model)
 	{
 		return false;

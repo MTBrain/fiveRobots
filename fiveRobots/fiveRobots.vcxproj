@@ -102,8 +102,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Amon\Desktop\fiveRobots\DirectX11\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Amon\Desktop\fiveRobots\DirectX11\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\DirectX11\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\DirectX11\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>D:\Programier kram\games\d3d11 universal\fiveRobots\DirectX11\Include;$(IncludePath)</IncludePath>

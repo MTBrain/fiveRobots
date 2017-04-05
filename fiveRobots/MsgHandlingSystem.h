@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _MHS_H_
 #define _MHS_H_
 
@@ -19,7 +17,6 @@ struct MHS
 	unsigned int size;
 };
 
-vMHS m_vmhs;
 #endif
 
 

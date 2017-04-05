@@ -8,7 +8,6 @@
 ///////////////////////
 // MY CLASS INCLUDES //
 ///////////////////////
-#include "MsgHandlingSystem.h"
 #include "d3dclass.h"
 #include "cameraclass.h"
 #include "textureshaderclass.h"
@@ -34,7 +33,7 @@ const float SCREEN_NEAR = 0.1f;
 class GraphicsClass
 {
 public:
-	GraphicsClass();
+	GraphicsClass(vMHS*);
 	GraphicsClass(const GraphicsClass&);
 	~GraphicsClass();
 
@@ -43,9 +42,11 @@ public:
 	bool Frame(vMHS*);
 
 private:
+	vMHS* m_vMHS;
 	bool Render(float);
 
 private:
+	vMHS* m_vmhs;
 	D3DClass* m_D3D;
 	CameraClass* m_Camera;
 	TextureShaderClass* m_TextureShader;

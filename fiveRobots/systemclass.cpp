@@ -14,6 +14,8 @@ SystemClass::SystemClass()
 	m_cpuUsage = 0;
 	m_fps = 0;
 	m_timer = 0;
+
+	m_vmhs = new vector<MHS>;
 }
 
 
@@ -51,7 +53,7 @@ bool SystemClass::Initialize()
 	m_Input->Initialize(m_hinstance,m_hwnd,screenWidth,screenHeight);
 
 
-	m_game = new GameClass();
+	m_game = new GameClass(m_vmhs);
 	if (!m_game)
 	{
 		MessageBoxA(NULL, "game ini failed", "sysClass", MB_OK);
@@ -89,7 +91,7 @@ bool SystemClass::Initialize()
 
 	m_timer->Initialize();
 	// Create the graphics object.  This object will handle rendering all the graphics for this application.
-	m_Graphics = new GraphicsClass;
+	m_Graphics = new GraphicsClass(m_vmhs);
 	if(!m_Graphics)
 	{
 		return false;

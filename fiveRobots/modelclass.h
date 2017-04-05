@@ -43,7 +43,7 @@ private:
 
 public:
 	
-	ModelClass();
+	ModelClass(vMHS*);
 	ModelClass(const ModelClass&);
 	~ModelClass();
 
@@ -72,6 +72,8 @@ private:
 
 	bool createModel(MHS);
 	void createRectangle(D3DXVECTOR3, D3DXVECTOR3, VertexType*, unsigned long*);
+
+	vMHS* m_vmhs;
 
 private:
 

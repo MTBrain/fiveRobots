@@ -20,7 +20,6 @@
 ///////////////////////
 // MY CLASS INCLUDES //
 ///////////////////////
-#include "MsgHandlingSystem.h"
 
 #include "inputclass.h"
 #include "graphicsclass.h"
@@ -48,6 +47,7 @@ public:
 
 	LRESULT CALLBACK MessageHandler(HWND, UINT, WPARAM, LPARAM);
 
+	vMHS* m_vmhs;
 private:
 	bool Frame();
 	void InitializeWindows(int&, int&);

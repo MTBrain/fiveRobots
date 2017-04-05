@@ -1,8 +1,8 @@
 #include "gameclass.h"
 
-GameClass::GameClass()
+GameClass::GameClass(vMHS* in)
 {
-
+	m_vmhs = in;
 }
 
 
@@ -27,7 +27,7 @@ vector<MHS>* GameClass::Initialize(MHS in)
 
 bool GameClass::Frame(void)
 {
-	if (messages.size() != 0)
+	if (m_vmhs->size() != 0)
 	{
 		return false;
 	}
@@ -36,5 +36,5 @@ bool GameClass::Frame(void)
 
 	// do shit 
 
-	return false;; // should be changed
+	return true; // should be changed
 }
