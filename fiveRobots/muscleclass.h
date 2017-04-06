@@ -6,13 +6,13 @@
 class MuscleClass
 {
 public:
-	double strength;
-	double cTime, eTime;
-	double cLength, eLength;
-	double time, offsetTime;
+	float strength;
+	float cTime, eTime;
+	float cLength, eLength;
+	float time, offsetTime;
 	unsigned int node1, node2;
 	MuscleClass();
 
-	MuscleClass(double, double, double, double, double, double, double,unsigned int,unsigned int);
+	MuscleClass(float, float, float, float, float, float, float,unsigned int,unsigned int);
 };
 #endif

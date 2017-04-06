@@ -10,7 +10,7 @@ class CreatureClass
 public:
 	NodeClass** nodes;
 	MuscleClass** muscles;
-	double score;
+	float score;
 	int nodeCount;
 	int muscleCount;
 
@@ -18,6 +18,6 @@ public:
 
 	CreatureClass(int, int);
 
-	void setScore(double);
+	void setScore(float);
 };
 #endif

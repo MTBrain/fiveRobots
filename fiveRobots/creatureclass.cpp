@@ -10,8 +10,8 @@ CreatureClass::CreatureClass(int n, int m)
 	nodeCount = n;
 	muscleCount = m;
 	int i = 0;
-	double size, mass, posX, posY, velX, velY;
-	double strength, cTime, eTime, cLength, eLength, time, offsetTime;
+	float size, mass, posX, posY, velX, velY;
+	float strength, cTime, eTime, cLength, eLength, time, offsetTime;
 	unsigned int node1, node2;
 	nodes = (NodeClass**)malloc(n * sizeof(NodeClass*));
 	muscles = (MuscleClass**)malloc(m * sizeof(MuscleClass*));
@@ -42,7 +42,7 @@ CreatureClass::CreatureClass(int n, int m)
 	}
 }
 
-void CreatureClass::setScore(double _score)
+void CreatureClass::setScore(float _score)
 {
 	score = _score;
 }

@@ -5,13 +5,13 @@
 class NodeClass
 {
 public:
-	double size; 
-	double mass;
-	double posX, posY;
-	double velX, velY;
+	float size; 
+	float mass;
+	float posX, posY;
+	float velX, velY;
 
 	NodeClass();
 
-	NodeClass(double, double, double, double, double, double);
+	NodeClass(float, float, float, float, float, float);
 };
 #endif

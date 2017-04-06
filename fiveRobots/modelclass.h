@@ -76,7 +76,7 @@ private:
 	bool createModel(MHS);
 	void createRectangle(D3DXVECTOR3, D3DXVECTOR3, VertexType*, unsigned long*);
 	void createRectangle2D(D3DXVECTOR3, D3DXVECTOR3, VertexType*, unsigned long*,UINT ,UINT);
-	void createCircle(D3DXVECTOR3, double, VertexType*, unsigned long*,int,UINT,UINT);
+	void createCircle(D3DXVECTOR3, float, VertexType*, unsigned long*,int,UINT,UINT);
 	
 
 private:

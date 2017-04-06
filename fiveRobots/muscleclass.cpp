@@ -4,7 +4,7 @@ MuscleClass::MuscleClass()
 {
 }
 
-MuscleClass::MuscleClass(double _strength, double _cTime, double _eTime, double _cLength, double _eLength, double _time, double _offsetTime,unsigned int _node1,unsigned int _node2)
+MuscleClass::MuscleClass(float _strength, float _cTime, float _eTime, float _cLength, float _eLength, float _time, float _offsetTime,unsigned int _node1,unsigned int _node2)
 {
 	strength = _strength;
 	cTime = cTime;
