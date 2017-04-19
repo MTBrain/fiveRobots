@@ -4,7 +4,7 @@ NodeClass::NodeClass()
 {
 }
 
-NodeClass::NodeClass(double _size, double _mass, double _posX, double _posY, double _velX, double _velY)
+NodeClass::NodeClass(float _size, float _mass, float _posX, float _posY, float _velX, float _velY)
 {
 	size = _size;
 	mass = _mass;

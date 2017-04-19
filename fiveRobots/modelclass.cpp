@@ -417,14 +417,14 @@ bool ModelClass::createModel(MHS in)
 		UINT ov = 0;
 		UINT oi = 0;
 
+		m_vertices = new VertexType[240];
+		m_indices = new unsigned long[720];
 		UINT circleVertices = 12;
 
 		if (!m_creature)
 		{
 			m_creature = new CreatureClass(3, 2);
 		}
-		m_vertices =(VertexType*) malloc(m_creature->nodeCount*circleVertices + m_creature->muscleCount * 4);
-		m_indices = (unsigned long*)malloc(m_creature->nodeCount*circleVertices * 3 + m_creature->muscleCount * 6);
 		for (int i = 0; i < m_creature->nodeCount; i++)
 		{
 			createCircle(D3DXVECTOR3(m_creature->nodes[i]->posX, m_creature->nodes[i]->posY, 0.0), m_creature->nodes[i]->size, m_vertices, m_indices, circleVertices,oi,ov);
@@ -433,9 +433,10 @@ bool ModelClass::createModel(MHS in)
 		}
 		for (int i = 0; i < m_creature->muscleCount; i++)
 		{
-			createRectangle2D(D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node1]->posX, m_creature->nodes[m_creature->muscles[i]->node1]->posY + MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1f),
-				D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node2]->posX, m_creature->nodes[m_creature->muscles[i]->node2]->posY - MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1),
-				m_vertices, m_indices,oi,ov);
+			float a = m_creature->nodes[m_creature->muscles[i]->node1]->posX;
+			D3DXVECTOR3 tlb = D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node1]->posX, m_creature->nodes[m_creature->muscles[i]->node1]->posY + MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1f);
+			D3DXVECTOR3 brf = D3DXVECTOR3(m_creature->nodes[m_creature->muscles[i]->node2]->posX, m_creature->nodes[m_creature->muscles[i]->node2]->posY - MUSCLE_RELATIVE_SIZE * m_creature->nodes[m_creature->muscles[i]->node2]->size, -0.1f);
+			createRectangle2D(tlb, brf, m_vertices, m_indices, oi, ov);
 			ov += 4;
 			oi += 6;
 		}
@@ -523,15 +524,16 @@ void ModelClass::createRectangle(D3DXVECTOR3 tlb, D3DXVECTOR3 brf, VertexType* v
 	3 * vertices -> index
 	vertices -> vertices
 */
-void ModelClass::createCircle(D3DXVECTOR3 tlb, double r, VertexType* vertexbuffer, unsigned long* indexbuffer ,int vertices,UINT oi ,UINT ov)
+void ModelClass::createCircle(D3DXVECTOR3 center, float r, VertexType* vertexbuffer, unsigned long* indexbuffer ,int vertices,UINT oi ,UINT ov)
 {
-	double step = 2 * M_PI / vertices;
-
+	float step = 2 * M_PI / vertices;
+	float a = m_creature->score;
 	for (int i = 0; i < vertices; i++)
 	{
-		vertexbuffer[i + ov].normal = D3DXVECTOR3(0.0, 0.0, 1.0);
-		vertexbuffer[i + ov].position = D3DXVECTOR3(cos(step*i), sin(step*i), 0.0);
-		vertexbuffer[i + ov].texture = D3DXVECTOR2(0.0, 0.0);
+		
+		vertexbuffer[i + ov].normal = D3DXVECTOR3(0.0f, 0.0f, 1.0f);
+		vertexbuffer[i + ov].position = D3DXVECTOR3(center.x + cos(step*i), center.y + (step*i), center.z);
+		vertexbuffer[i + ov].texture = D3DXVECTOR2(0.0f, 0.0f);
 	}
 	for (int i = 0; i < vertices - 2; i++)
 	{
