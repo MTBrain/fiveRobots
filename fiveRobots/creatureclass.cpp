@@ -24,7 +24,7 @@ CreatureClass::CreatureClass(int n, int m)
 		velX = 0;
 		velY = 0;
 		
-		nodes[i] = &NodeClass(size, mass, posX, posY, velX, velY);
+		nodes[i] = new NodeClass(size, mass, posX, posY, velX, velY);
 	}
 
 	for (i = 0; i < m; i++)
@@ -38,7 +38,7 @@ CreatureClass::CreatureClass(int n, int m)
 		offsetTime = 0;
 		node1 = rand() % n;
 		node2 = rand() % n;
-		muscles[i] = &MuscleClass(strength, cTime, eTime, cLength, eLength, time, offsetTime,node1,node2);
+		muscles[i] = new MuscleClass(strength, cTime, eTime, cLength, eLength, time, offsetTime,node1,node2);
 	}
 }
 

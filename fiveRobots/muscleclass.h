@@ -6,13 +6,14 @@
 class MuscleClass
 {
 public:
-	double strength;
-	double cTime, eTime;
-	double cLength, eLength;
-	double time, offsetTime;
+	float strength;
+	unsigned int cTime, eTime;
+	float cLength, eLength;
+	unsigned int time, offsetTime, lastTime;
 	unsigned int node1, node2;
+	bool isContracting;
 	MuscleClass();
 
-	MuscleClass(double, double, double, double, double, double, double,unsigned int,unsigned int);
+	MuscleClass(float, unsigned int, unsigned int, float, float, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool);
 };
 #endif

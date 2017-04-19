@@ -1,4 +1,4 @@
-
+#define TICKS_PER_SECOND 500
 #pragma once
 
 #ifndef _FIVEROBOTS_H
